@@ -30,5 +30,6 @@
     "uglify-js": "^2.4.20",
     "watchify": "^2.1.1"
   },
+  "license": "MIT",
   "author": "Crane Leeon"
 }
