@@ -2,18 +2,18 @@
 A Node project template with basic folder structure and files includes Grunt tasks &  package.json to start a React web app development. 
 
 ## Folder structure
-`  +/  (project root)`
-`    + /serv (server-side app folder)`
-`       -- (all server side js stays here)`
-`    + /public (static/ built client-side  assets) `
-`    + /dist (final output package for deploying, includes server & webapp with minimized assets)`
-`    + /web (src client-side js/css)`
-`       —-(all other assets like html & imgs stay here)`
-`       + /js (web js)`
-`         -- app.js (webapp main entry, since browserify will build this into bundle.app.js, new entries should be added into ./grunt/browserify.js)`
-`    + /css (web css)`
-`    + /build (output files for development debug)`
-`    + /dist  (final output minified files for deploy )`
+`  +/  (project root)
+    + /serv (server-side app folder)
+       -- (all server side js stays here)
+    + /public (static/ built client-side  assets) 
+    + /dist (final output package for deploying, includes server & webapp with minimized assets)
+    + /web (src client-side js/css)
+       —-(all other assets like html & imgs stay here)
+       + /js (web js)
+         -- app.js (webapp main entry, since browserify will build this into bundle.app.js, new entries should be added into ./grunt/browserify.js)
+    + /css (web css)
+    + /build (output files for development debug)
+    + /dist  (final output minified files for deploy )`
 
 
 ## Build
