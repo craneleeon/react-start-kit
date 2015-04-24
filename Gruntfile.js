@@ -4,7 +4,15 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json')
+        pkg: grunt.file.readJSON('package.json'),
+        concurrent: {
+            target: {
+                tasks: ['browserify:dev', 'watch'],
+                options: {
+                    logConcurrentOutput: true
+                }
+            }
+        }
     });
 
     grunt.config('jshint', require('./grunt/jshint.js'));
@@ -28,7 +36,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', ['browserify:build', 'less:build', 'copy:build']);
     grunt.registerTask('cleanbuild', ['clean:build', 'build']);
-    grunt.registerTask('dev', ['watch']);
+    grunt.registerTask('dev', ['concurrent:target']);
+    grunt.registerTask('devj', ['browserify:dev']);
+    grunt.registerTask('devw', ['watch']);
     grunt.registerTask('dist', ['clean:dist', 'cleanbuild', 'uglify', 'less:dist', 'copy:dist']);
 
     grunt.registerTask('default', ['jshint']);

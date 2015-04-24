@@ -18,6 +18,7 @@ module.exports = {
                 "envify"
             ],
             watch: true,
+            keepAlive: true,
             watchifyOptions: {
                 verbose: true,
                 delay: 600
