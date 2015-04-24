@@ -4,15 +4,14 @@ A Node project template with basic folder structure and files includes Grunt tas
 ## Folder structure
 ```
  +/  (project root)
-   + /serv (server-side app folder)
-       -- (all server side js stays here)
+    -- (all server-side js stays here)
     + /public (static/ built client-side  assets) 
     + /dist (final output package for deploying, includes server & webapp with minimized assets)
-    + /web (src client-side js/css)
+    + /web (client-side js/css/assets)
        —-(all other assets like html & imgs stay here)
        + /js (web js)
          -- app.js (webapp main entry, since browserify will build this into bundle.app.js, new entries should be added into ./grunt/browserify.js)
-    + /css (web css)
+       + /css (web css)
     + /build (output files for development debug)
     + /dist  (final output minified files for deploy )
 ```
@@ -51,6 +50,7 @@ Command below will output all necessary files minified for your web app into dir
 "grunt-githooks"
 "grunt-jsxhint"
 "grunt-react"
+"grunt-concurrent"
 "less"
 "load-grunt-tasks"
 "react-tools"
