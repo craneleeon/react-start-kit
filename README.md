@@ -2,8 +2,9 @@
 A Node project template with basic folder structure and files includes Grunt tasks &  package.json to start a React web app development. 
 
 ## Folder structure
-  +/  (project root)
-    + /serv (server-side app folder)
+```
+ +/  (project root)
+   + /serv (server-side app folder)
        -- (all server side js stays here)
     + /public (static/ built client-side  assets) 
     + /dist (final output package for deploying, includes server & webapp with minimized assets)
@@ -14,7 +15,7 @@ A Node project template with basic folder structure and files includes Grunt tas
     + /css (web css)
     + /build (output files for development debug)
     + /dist  (final output minified files for deploy )
-
+```
 
 ## Build
 You must have [npm](https://www.npmjs.org/) ind [grunt](https://www.npmjs.com/package/grunt) nstalled on your computer.
