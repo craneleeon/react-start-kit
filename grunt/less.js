@@ -9,6 +9,7 @@ var fileset_build = assign({}, fileset, {dest: 'public/css'});
 var fileset_dist = assign({}, fileset, {dest: 'dist/public/css'});
 
 module.exports = {
+    dev:{},
     build: {
         files: [fileset_build]
     },

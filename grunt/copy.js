@@ -11,6 +11,7 @@ var fileset_dist = assign({}, fileset, src_html, dest_dist);
 
 
 module.exports = {
+    dev:{},
     build: {
         files: [fileset_build]
     },

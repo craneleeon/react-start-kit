@@ -1,5 +1,5 @@
 var fileset = {
-        'public/js/bundle.app.js': ['web/js/app.js']
+    'public/js/bundle.app.js': ['web/js/app.js']
 }
 module.exports = {
     build: {
@@ -9,7 +9,7 @@ module.exports = {
                 "envify"
             ]
         },
-        files: fileset           
+        files: fileset
     },
     dev: {
         options: {
