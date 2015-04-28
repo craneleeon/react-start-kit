@@ -2,7 +2,7 @@ var assign = require('object-assign');
 var fileset = {
             expand: true,
             cwd: 'web/css/',
-            src: ['*.less', '*.css'],
+            src: ['**/*.less', '**/*.css'],
             ext: '.css'
         };
 var fileset_build = assign({}, fileset, {dest: 'public/css'});

@@ -4,9 +4,13 @@ module.exports = {
         spawn: false
     },
     css: {
-        files: ['web/css/**/*.less', 'web/css/**/*.css'],
+        files: ['web/css/**/*.less'],
         tasks: ['less:dev']
     },
+    // js: {
+    //     files: ['web/js#<{(||)}>#*.js', 'web/js#<{(||)}>#*.jsx'],
+    //     tasks: ['browserify:dev']
+    // },
     assets: {
         options: {
             cwd: 'web'

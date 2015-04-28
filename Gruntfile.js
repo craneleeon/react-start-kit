@@ -28,7 +28,7 @@ module.exports = function(grunt) {
             grunt.config('less.dev.src', filepath);
             grunt.config('less.dev.dest', filepath.replace('web/', 'public/').replace('.less', '.css'));
         }
-        if (grunt.file.isMatch(grunt.config('watch.assets.files'), filepath)) {
+        else if (grunt.file.isMatch(grunt.config('watch.assets.files'), filepath)) {
             grunt.config('copy.dev.src', filepath);
             grunt.config('copy.dev.dest', filepath.replace('web/', 'public/'));
         }

@@ -1,5 +1,6 @@
 var fileset = {
-    'public/js/bundle.app.js': ['web/js/app.js']
+    'public/js/bundle.app.js': ['web/app/app.js']
+    // 'public/js/bundle.test.js': ['web/app/js/test.js']
 }
 module.exports = {
     build: {

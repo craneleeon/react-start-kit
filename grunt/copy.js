@@ -7,10 +7,13 @@ var fileset = {
     cwd: 'web/'
 };
 var fileset_build = assign({}, fileset, src_html, dest_build);
-var fileset_dist = assign({}, fileset, src_html, dest_dist);
+var fileset_dist = assign({}, fileset, {src: src_html.src.concat(['!js/**/*.js'])}, dest_dist);
 
 
 module.exports = {
+    options:{
+        verbose: true
+    },
     dev:{},
     build: {
         files: [fileset_build]
