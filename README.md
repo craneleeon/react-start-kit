@@ -1,5 +1,5 @@
 ## react-start-kit
-A Node project template with basic folder structure and files includes Grunt tasks &  package.json to start a React web app development. 
+A Node project template with basic folder structure and files includes Grunt tasks &  package.json to start a React web app development.  [browserify](http://browserify.org) with [reactify](https://www.npmjs.com/package/reactify) used to compile js components. 
 
 ## Folder structure
 ```
@@ -9,9 +9,10 @@ A Node project template with basic folder structure and files includes Grunt tas
     + /dist (final output package for deploying, includes server & webapp with minimized assets)
     + /web (client-side js/css/assets)
        —-(all other assets like html & imgs stay here)
-       + /js (web js)
+       + /app (web js)
          -- app.js (webapp main entry, since browserify will build this into bundle.app.js, new entries should be added into ./grunt/browserify.js)
-       + /css (web css)
+       + /js (vender's js goes here will be copied to build/ and ignored by browserify)
+       + /css (css files, .less will be compiled)
     + /build (output files for development debug)
     + /dist  (final output minified files for deploy )
 ```
