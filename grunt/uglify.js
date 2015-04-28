@@ -9,11 +9,11 @@ module.exports = {
                 dead_code: true
             }
         },
-        files: [{
+        files:[{
             expand: true,
-            cwd: 'public/js',
-            src: '**/*.js',
-            dest: 'dist/public/js'
+            cwd: 'public/',
+            src: ['**/*.js', '!**/*.min.js'],
+            dest: 'dist/public/'
         }]
 
     }

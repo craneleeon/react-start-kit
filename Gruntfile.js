@@ -34,12 +34,12 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('build', ['browserify:build', 'less:build', 'copy:build']);
+    grunt.registerTask('build', ['copy:build', 'browserify:build', 'less:build']);
     grunt.registerTask('cleanbuild', ['clean:build', 'build']);
     grunt.registerTask('dev', ['concurrent:target']);
     grunt.registerTask('devj', ['browserify:dev']);
     grunt.registerTask('devw', ['watch']);
-    grunt.registerTask('dist', ['clean:dist', 'cleanbuild', 'uglify', 'less:dist', 'copy:dist']);
+    grunt.registerTask('dist', ['clean:dist', 'clean:build', 'copy:build', 'browserify:build', 'less:dist', 'copy:dist', 'uglify:dist']);
 
     grunt.registerTask('default', ['jshint']);
 

@@ -4,7 +4,10 @@ module.exports = {
         spawn: false
     },
     css: {
-        files: ['web/css/**/*.less'],
+        options: {
+            cwd: 'web'
+        },
+        files: ['**/*.less', '**/*.css'],
         tasks: ['less:dev']
     },
     // js: {
