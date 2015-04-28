@@ -11,8 +11,8 @@ A Node project template with basic folder structure and files includes Grunt tas
        —-(all other assets like html & imgs stay here)
        + /app (web js)
          -- app.js (webapp main entry, since browserify will build this into bundle.app.js, new entries should be added into ./grunt/browserify.js)
-       + /js (vender's js goes here will be copied to build/ and ignored by browserify)
-       + /css (css files, .less will be compiled)
+       + /js (vender's js goes here will be copied to "public/" and ignored by browserify)
+       + /css (css files, be copied to "public/",  ".less" files will be compiled to ".css")
     + /build (output files for development debug)
     + /dist  (final output minified files for deploy )
 ```
