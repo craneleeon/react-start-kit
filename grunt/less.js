@@ -1,4 +1,6 @@
-var fileset = require('./vars.js').less_fileset;  
+var fileset = {
+    "public/css/style.default.css": "web/less/style.default.less"
+}; 
 
 module.exports = {
     dev: {},

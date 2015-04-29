@@ -1,21 +1,17 @@
 var vars = require('./vars');
 var assets_surfixs = vars.assets_surfixs;
-var lessfileset = vars.less_fileset; 
+
 module.exports = {
     options: {
         spawn: false
     },
     less: {
         options: {
-            cwd: lessfileset.cwd 
+            cwd: 'web/less' 
         },
-        files: lessfileset.src,
-        tasks: ['less:dev']
+        files: '**/*.less',
+        tasks: ['less:build']
     },
-    // js: {
-    //     files: ['web/js#<{(||)}>#*.js', 'web/js#<{(||)}>#*.jsx'],
-    //     tasks: ['browserify:dev']
-    // },
     assets: {
         options: {
             cwd: 'web'

@@ -9,11 +9,11 @@ A Node project template with basic folder structure and files includes Grunt tas
     + /dist (final output package for deploying, includes server & webapp with minimized assets)
     + /web (client-side js, css, assets)
        —-(all other assets like html & imgs stay here)
-       + /app (js files uses in this web app, such as React components, and all these will be compiled into to public/js as browser js)
+       + /app (js files uses in this web app, such as React components, those entries set in grunt/browserify.js will be compiled into to public/js as browser js)
          -- app.js (webapp main entry, browserify will build this into bundle.app.js, new entries should be added into ./grunt/browserify.js)
        + /js (vender's js goes here will be copied to "public/js" untouched)
        + /css (css files, be copied to "public/css"  untouched)
-       + /less (".less" files will be compiled to "public/css" end with ".css")
+       + /less (".less" files, those entries set in grunt/less.js  will be compiled to "public/css" end with ".css")
     + /build (output files for development debug)
     + /dist  (final output minified files for deploy )
 ```
