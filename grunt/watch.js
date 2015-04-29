@@ -5,9 +5,9 @@ module.exports = {
     },
     less: {
         options: {
-            cwd: 'web'
+            cwd: 'web/less'
         },
-        files: ['**/*.less', '**/*.css'],
+        files: ['**/*.less'],
         tasks: ['less:dev']
     },
     // js: {
