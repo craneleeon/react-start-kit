@@ -3,7 +3,7 @@ module.exports = {
     options: {
         spawn: false
     },
-    css: {
+    less: {
         options: {
             cwd: 'web'
         },

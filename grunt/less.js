@@ -1,22 +1,21 @@
-var assign = require('object-assign');
 var fileset = {
-            expand: true,
-            cwd: 'web',
-            src: ['**/*.less'],
-            ext: '.css'
-        };
-var fileset_build = assign({}, fileset, {dest: 'public'});
+    expand: true,
+    cwd: 'web/less',
+    src: ['**/*.less'],
+    ext: '.css',
+    dest: 'public/css'
+};
 
 module.exports = {
-    dev:{},
+    dev: {},
     build: {
-        files: [fileset_build]
+        files: [fileset]
     },
     dist: {
         options: {
             compress: true
         },
-        files: [fileset_build]
+        files: [fileset]
     }
 
 };

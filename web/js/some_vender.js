@@ -1,10 +1,1 @@
-
-var React = require('react');
-window.React = React; 
-
-//TODO: creat components
-
-React.render(
-    <ChatApp />,
-    document.getElementById('mainsect’)
-);
+//some vender js come with the template

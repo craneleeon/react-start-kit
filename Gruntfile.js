@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     grunt.config('copy', require('./grunt/copy.js'));
 
     grunt.event.on('watch', function(action, filepath, target) {
-        if (grunt.file.isMatch(grunt.config('watch.css.files'), filepath)) {
+        if (grunt.file.isMatch(grunt.config('watch.less.files'), filepath)) {
             grunt.config('less.dev.src', filepath);
             grunt.config('less.dev.dest', filepath.replace('web/', 'public/').replace('.less', '.css'));
         }
