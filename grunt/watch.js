@@ -1,13 +1,15 @@
-var assets_surfixs = require('./vars').assets_surfixs;
+var vars = require('./vars');
+var assets_surfixs = vars.assets_surfixs;
+var lessfileset = vars.less_fileset; 
 module.exports = {
     options: {
         spawn: false
     },
     less: {
         options: {
-            cwd: 'web/less'
+            cwd: lessfileset.cwd 
         },
-        files: ['**/*.less'],
+        files: lessfileset.src,
         tasks: ['less:dev']
     },
     // js: {

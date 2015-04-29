@@ -1,10 +1,4 @@
-var fileset = {
-    expand: true,
-    cwd: 'web/less',
-    src: ['**/*.less'],
-    ext: '.css',
-    dest: 'public/css'
-};
+var fileset = require('./vars.js').less_fileset;  
 
 module.exports = {
     dev: {},
