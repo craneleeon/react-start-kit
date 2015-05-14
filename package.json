@@ -5,17 +5,17 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.12.3",
-    "keymirror": "~0.1.0",
-    "object-assign": "^1.0.0",
-    "flux": "^2.0.0",
-    "react": "^0.12.0"
+    "keymirror": "~0.1.1",
+    "object-assign": "^2.0.0",
+    "flux": "^2.0.3",
+    "react": "^0.13.3"
   },
   "devDependencies": {
-    "browserify": "^6.2.0",
-    "envify": "^3.0.0",
-    "exorcist": "0.2.0",
+    "browserify": "^10.1.3",
+    "envify": "^3.4.0",
+    "exorcist": "0.3.0",
     "grunt": "^0.4.5",
-    "grunt-browserify": "^3.7.0",
+    "grunt-browserify": "^3.8.0",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.0",
@@ -23,13 +23,13 @@
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-githooks": "^0.3.1",
-    "grunt-jsxhint": "^0.4.0",
-    "grunt-react": "^0.10.0",
+    "grunt-jsxhint": "^0.6.0",
+    "grunt-react": "^0.12.2",
     "less": "^2.5.0",
-    "load-grunt-tasks": "^3.0.0",
-    "react-tools": "^0.12.2",
-    "reactify": "^0.15.2",
-    "uglify-js": "^2.4.20"
+    "load-grunt-tasks": "^3.1.0",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.4.21"
   },
   "license": "MIT",
   "author": "Crane Leeon"
