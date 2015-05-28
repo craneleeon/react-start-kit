@@ -4,9 +4,8 @@ A Node project template with basic folder structure and files includes Grunt tas
 ## Folder structure
 ```
  +/  (project root)
-    -- (all server-side js stays here)
+    + /backend (all server-side js stays here)
     + /public (static/ built client-side  assets) 
-    + /dist (final output package for deploying, includes server & webapp with minimized assets)
     + /web (client-side js, css, assets)
        —-(all other assets like html & imgs stay here)
        + /app (js files uses in this web app, such as React components, those entries set in grunt/browserify.js will be compiled into to public/js as browser js)
@@ -15,7 +14,8 @@ A Node project template with basic folder structure and files includes Grunt tas
        + /css (css files, be copied to "public/css"  untouched)
        + /less (".less" files, those entries set in grunt/less.js  will be compiled to "public/css" end with ".css")
     + /build (output files for development debug)
-    + /dist  (final output minified files for deploy )
+    + /dist (final output package for deploying, includes server & webapp with minimized assets)
+    + server.js (node server start script)
 ```
 
 ## Build

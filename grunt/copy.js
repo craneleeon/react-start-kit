@@ -13,11 +13,23 @@ module.exports = {
         files: [fileset_build]
     },
     dist: {
-        files:[{
-            expand: true,
-            cwd: 'public/',
-            src: ['**/*.*', '!**/*.js', '**/*.min.js'],
-            dest: 'dist/public/'
-        }]
+        files:[
+            {
+                expand: true,
+                cwd: 'public/',
+                src: ['**/*.*', '!**/*.js', '**/*.min.js'],
+                dest: 'dist/public/'
+            },
+            {
+                src: "server.js",
+                dest: "dist/server.js"
+            },
+            {
+                expand: true,
+                cwd: 'backend/',
+                src: ['**/*.js'],
+                dest: 'dist/backend/'
+            }
+        ]
     }
 };
