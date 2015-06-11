@@ -21,8 +21,12 @@ module.exports = {
                 dest: 'dist/public/'
             },
             {
-                src: "server.js",
-                dest: "dist/server.js"
+                src: 'package.json',
+                dest: 'dist/package.json'
+            },
+            {
+                src: 'server.js',
+                dest: 'dist/server.js'
             },
             {
                 expand: true,
