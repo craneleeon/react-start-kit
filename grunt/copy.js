@@ -33,6 +33,12 @@ module.exports = {
                 cwd: 'backend/',
                 src: ['**/*.js'],
                 dest: 'dist/backend/'
+            },
+            {
+                expand: true,
+                cwd: 'node_modules/',
+                src: ['**/*'],
+                dest: 'dist/node_modules/'
             }
         ]
     }
