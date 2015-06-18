@@ -2,12 +2,15 @@ var fileset = {
     'public/js/bundle.app.js': ['web/app/app.js']
     // 'public/js/bundle.test.js': ['web/app/js/test.js']
 }
+var envify = require('envify/custom');
 module.exports = {
     dist: {
         options: {
             transform: [
                 "reactify",
-                "envify"
+                envify({
+                    NODE_ENV: 'production'
+                })
             ]
         },
         files: fileset
@@ -27,7 +30,9 @@ module.exports = {
         options: {
             transform: [
                 "reactify",
-                "envify"
+                envify({
+                    NODE_ENV: 'development'
+                })
             ],
             watch: true,
             keepAlive: true,
