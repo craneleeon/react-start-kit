@@ -7,6 +7,7 @@ if(!process.env.NODE_ENV) {process.env.NODE_ENV = 'development';}
 console.info({'process.env': process.env});
 var express = require('express');
 var app = express();
+var stringifyObject = require('stringify-object');
 var fmt = require('./backend/format');
 var compression = require('compression');
 
@@ -16,6 +17,8 @@ function shouldCompress(req, res) {
     }
     return compression.filter(req, res)
 }
+
+// app.engine('jade', require('html').__express);
 
 //----static resource
 var options4static = {
@@ -30,54 +33,19 @@ var options4static = {
 		}
 };
 app.use(compression({filter: shouldCompress}));
-//Comment if on deployment uses nginx to serve static files (./public) 
-app.use(express.static('public', options4static));
-
-//---404
-var NOTFOUND = "Page Not Found";
-app.use(function(req, res) {
-	res.status(404);
-	res.format({
-		  html: function() {
-		    res.sendFile('404.html',{root:'public/'});
-		  },
-		  json: function(){
-		    res.send({ message: NOTFOUND });
-		  },
-		  'default': function() {
-		    res.send(NOTFOUND);
-		  }
-	});
-});
-
-//---Error Handler
-app.use(function(err, req, res, next) {
-	console.log(err);
-	res.status(500);
-	res.format({
-		  'text/plain': function(){
-		    res.send('Something broke!');
-		  },
-
-		  'text/html': function(){
-		    res.send('<p>Something broke!</p>');
-		  },
-
-		  'application/json': function(){
-		    res.send({ message: 'Something broke!' });
-		  },
-
-		  'default': function() {
-		    res.status(406).send('Not Acceptable');
-		  }
-	});
-});
 
 //---CustomConfig
 app.configDev =  function(){
+	console.info('Dev mode');
+	app.use(express.static('public', options4static));
 }
+
 app.configProd = function(){	
+	console.info('Prod mode');
 };
+
+require("./backend/routes")(app);
+
 switch(process.env.NODE_ENV){
 	case 'development': 
 		app.configDev();
@@ -87,8 +55,29 @@ switch(process.env.NODE_ENV){
 		break;
 }
 
-require("./backend/routes")(app);
+//---404
+var NOTFOUND = "Not found";
+app.use(function(req, res) {
+    res.status(404);
+    res.format({
+          html: function() {
+            res.sendFile('404.html',{root:'public/'});
+          },
+          json: function(){
+            res.send({ message: NOTFOUND });
+          },
+          'default': function() {
+            res.send({ message: NOTFOUND });
+          }
+    });
+});
 
-app.listen(8080);
+//---Error Handler
+app.use(function(err, req, res, next) {
+	console.log(err);
+	res.status(500).send({ message: 'Something broke!' });
+});
+
+app.listen(8000);
 console.log('Express server started');
 
