@@ -3,11 +3,22 @@ var fileset = {
     // 'public/js/bundle.test.js': ['web/app/js/test.js']
 }
 module.exports = {
-    build: {
+    dist: {
         options: {
             transform: [
                 "reactify",
                 "envify"
+            ]
+        },
+        files: fileset
+    },
+    build: {
+        options: {
+            transform: [
+                "reactify",
+                envify({
+                    NODE_ENV: 'development'
+                })
             ]
         },
         files: fileset
