@@ -1,5 +1,5 @@
 module.exports = {
   all: {
-    src: ['web/js/**/*.jsx', 'web/js/**/*.js']
+    src: ['web/js/**/*.jsx', 'web/js/**/*.js', 'backend/**/*.js']
   }
 };
