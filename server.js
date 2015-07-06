@@ -78,6 +78,7 @@ app.use(function(err, req, res, next) {
 	res.status(500).send({ message: 'Something broke!' });
 });
 
-app.listen(8000);
-console.log('Express server started');
+var port = process.env.PORT || 8000;
+app.listen(port);
+console.log('Express server started on:'+port);
 
