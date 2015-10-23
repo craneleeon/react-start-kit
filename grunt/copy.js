@@ -17,7 +17,7 @@ module.exports = {
             {
                 expand: true,
                 cwd: 'public/',
-                src: ['**/*.*', '!**/*.js', '**/*.min.js'],
+                src: ['**/*.*', '!**/*.js','!**/sample*.html', '**/*.min.js'],
                 dest: 'dist/public/'
             },
             {
@@ -27,19 +27,20 @@ module.exports = {
             {
                 src: 'server.js',
                 dest: 'dist/server.js'
-            },
-            {
-                expand: true,
-                cwd: 'backend/',
-                src: ['**/*.js'],
-                dest: 'dist/backend/'
-            },
-            {
-                expand: true,
-                cwd: 'node_modules/',
-                src: ['**/*'],
-                dest: 'dist/node_modules/'
             }
+            // ,
+            // {
+            //     expand: true,
+            //     cwd: 'backend/',
+            //     src: ['**/*.js'],
+            //     dest: 'dist/backend/'
+            // },
+            // {
+            //     expand: true,
+            //     cwd: 'node_modules/',
+            //     src: ['**/*'],
+            //     dest: 'dist/node_modules/'
+            // }
         ]
     }
 };

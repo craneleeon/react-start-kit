@@ -1,6 +1,5 @@
 var fileset = {
     'public/js/bundle.app.js': ['web/app/app.js']
-    // 'public/js/bundle.test.js': ['web/app/js/test.js']
 }
 var envify = require('envify/custom');
 var assign = require('object-assign');
@@ -33,17 +32,17 @@ function makeConf(env, iswatch){
 module.exports = {
     dist: makeConf(
         envify({
-            NODE_ENV: 'production'
+            NODE_ENV: 'dist'
         })
     ),
     build: makeConf(
         envify({
-            NODE_ENV: 'development'
+            NODE_ENV: 'dev'
         })
     ),
     dev: makeConf(
         envify({
-            NODE_ENV: 'development'
+            NODE_ENV: 'dev'
         }),
         true
     )
