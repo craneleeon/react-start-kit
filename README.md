@@ -1,13 +1,11 @@
 ## react-start-kit
-A Node project template with basic folder structure and files includes Grunt tasks &  package.json to start a React web app development.  [browserify](http://browserify.org) with [reactify](https://www.npmjs.com/package/reactify) used to compile js components. 
+A Node project template with basic folder structure and files includes Grunt tasks &  package.json to start a React web app development.  [browserify](http://browserify.org) with [babel](https://babeljs.io) used to compile js components. 
 
 ## Folder structure
 ```
  +/  (project root)
-    + /backend (all server-side js stays here)
     + /public (static/ built client-side  assets) 
     + /web (client-side js, css, assets)
-       —-(all other assets like html & imgs stay here)
        + /app (js files uses in this web app, such as React components, those entries set in grunt/browserify.js will be compiled into to public/js as browser js)
          -- app.js (webapp main entry, browserify will build this into bundle.app.js, new entries should be added into ./grunt/browserify.js)
        + /js (vender's js goes here will be copied to "public/js" untouched)
@@ -39,23 +37,4 @@ Command below will output all necessary files minified for your web app into dir
 `grunt dist`
 
 ## Modules uses
-"browserify"
-"envify"
-"exorcist"
-"grunt"
-"grunt-browserify"
-"grunt-contrib-clean"
-"grunt-contrib-copy"
-"grunt-contrib-less"
-"grunt-contrib-uglify"
-"grunt-contrib-watch"
-"grunt-githooks"
-"grunt-jsxhint"
-"grunt-react"
-"grunt-concurrent"
-"less"
-"load-grunt-tasks"
-"react-tools"
-"reactify"
-"uglify-js"
-
+Please refer to package.js

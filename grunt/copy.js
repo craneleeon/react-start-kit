@@ -17,7 +17,8 @@ module.exports = {
             {
                 expand: true,
                 cwd: 'public/',
-                src: ['**/*.*', '!**/*.js','!**/sample*.html', '**/*.min.js'],
+                src: ['**/*.*', '!**/*.js', '**/*.min.js'],
+                // src: ['*|)}>#*.*', '!*|)}>#*.js','!*|)}>#sample*.html', '*|)}>#*.min.js'],
                 dest: 'dist/public/'
             },
             {

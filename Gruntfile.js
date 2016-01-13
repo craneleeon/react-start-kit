@@ -38,6 +38,7 @@ module.exports = function(grunt) {
     grunt.registerTask('devj', ['browserify:dev']);
     grunt.registerTask('devw', ['watch']);
     grunt.registerTask('dist', ['clean:dist', 'clean:build', 'copy:build', 'browserify:dist', 'less:dist', 'copy:dist', 'uglify:dist']);
+    grunt.registerTask('test', ['clean:dist', 'clean:build', 'copy:build', 'browserify:test', 'less:dist', 'copy:dist', 'uglify:dist']);
 
     grunt.registerTask('default', ['dev']);
 

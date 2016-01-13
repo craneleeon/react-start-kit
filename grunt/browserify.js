@@ -1,5 +1,5 @@
 var fileset = {
-    'public/js/bundle.app.js': ['web/app/app.js']
+    'public/js/bundle.index.js': ['web/app/index.js']
 }
 var envify = require('envify/custom');
 var assign = require('object-assign');
@@ -8,8 +8,7 @@ function makeConf(env, iswatch){
     var conf = {
         options: {
             transform: [
-                ["babelify", { "blacklist": ["regenerator"] }],
-                // "reactify",
+                ["babelify", { "presets": ["es2015", "react"] }],
                 env
             ]
         },
@@ -32,7 +31,12 @@ function makeConf(env, iswatch){
 module.exports = {
     dist: makeConf(
         envify({
-            NODE_ENV: 'dist'
+            NODE_ENV: 'production'
+        })
+    ),
+    test: makeConf(
+        envify({
+            NODE_ENV: 'test'
         })
     ),
     build: makeConf(
