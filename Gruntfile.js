@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.config('webfont', require('./grunt/webfont.js'));
     // grunt.config('jshint', require('./grunt/jshint.js'));
     grunt.config('less', require('./grunt/less.js'));
     grunt.config('browserify', require('./grunt/browserify.js'));
