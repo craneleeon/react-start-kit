@@ -1,5 +1,5 @@
 module.exports = {
-    build: {
+    icons: {
         src: 'web/icons/*.svg',
         dest: 'web/css/fonts',
         options: {

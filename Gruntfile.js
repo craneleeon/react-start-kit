@@ -33,6 +33,7 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.registerTask('webfont', ['webfont:icons']);
     grunt.registerTask('build', ['copy:build', 'browserify:build', 'less:build']);
     grunt.registerTask('cleanbuild', ['clean:build', 'build']);
     grunt.registerTask('dev', ['concurrent:target']);
