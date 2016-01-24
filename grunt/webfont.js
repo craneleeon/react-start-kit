@@ -1,6 +1,6 @@
 module.exports = {
     icons: {
-        src: 'web/icons/*.svg',
+        src: 'icons/*.svg',
         dest: 'web/css/fonts',
         options: {
             font: 'lmhico',
